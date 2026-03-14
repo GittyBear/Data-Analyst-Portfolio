@@ -10,11 +10,6 @@ Tasks Performed:
 - Remove duplicate records
 */
 
-/* ============================================================
-   02_DATA_CLEANING.SQL
-   Purpose: Clean raw data and create typed clean table
-   ============================================================ */
-
 /* Remove missing customers */
 DELETE FROM retailsalespro
 WHERE customer_id IS NULL;
