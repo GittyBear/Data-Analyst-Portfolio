@@ -1,3 +1,18 @@
+/*
+Project: Retail Customer Analytics
+Step 1: Database Setup
+
+This script creates the retail database and required tables
+for storing transaction data.
+
+Tables Created:
+- customers
+- products
+- transactions
+
+Author: Harshita Reddy / Omkar Powar
+*/
+
 /* ============================================================
    01_DATABASE_SETUP.SQL
    Purpose: Create database and raw table structure
@@ -24,3 +39,4 @@ CREATE TABLE retailsalespro (
 );
 
 /* After this, import CSV using pgAdmin Import Tool */
+
