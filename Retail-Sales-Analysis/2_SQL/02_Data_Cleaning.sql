@@ -1,3 +1,15 @@
+/*
+Step 2: Data Cleaning
+
+Purpose:
+Clean raw sales data before analysis.
+
+Tasks Performed:
+- Handle NULL values
+- Standardize date format
+- Remove duplicate records
+*/
+
 /* ============================================================
    02_DATA_CLEANING.SQL
    Purpose: Clean raw data and create typed clean table
