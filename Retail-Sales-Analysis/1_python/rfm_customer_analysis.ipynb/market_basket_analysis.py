@@ -1,3 +1,7 @@
+#Purpose:
+          # Find products frequently bought together
+          # Used for cross-selling insights
+
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 from data_loader import load_sales_data
