@@ -1,55 +1,93 @@
-Create database:-
-            CREATE DATABASE hospital_analysis;
-Create table:-  
-            CREATE TABLE diabetic_data (
-encounter_id BIGINT,
+-- ===============================================
+-- HOSPITAL READMISSION ANALYSIS PROJECT
+-- Data Analyst Portfolio Project
+-- File: 01_database_setup.sql
+-- ===============================================
+
+-- Dataset: UCI Diabetes 130-US hospitals dataset
+-- Time period: 1999–2008
+-- Objective: Analyze factors affecting hospital readmission
+
+-- Step 1: Create database
+CREATE DATABASE IF NOT EXISTS hospital_analysis;
+
+-- Step 2: Select database
+USE hospital_analysis;
+
+-- Step 3: Create main table
+
+CREATE TABLE diabetic_data (
+
+-- Patient Identifiers
+encounter_id BIGINT PRIMARY KEY,
 patient_nbr BIGINT,
-race TEXT,
-gender TEXT,
-age TEXT,
-weight TEXT,
+
+-- Demographics
+race VARCHAR(50),
+gender VARCHAR(20),
+age VARCHAR(10),
+weight VARCHAR(10),
+
+-- Admission Details
 admission_type_id INT,
 discharge_disposition_id INT,
 admission_source_id INT,
 time_in_hospital INT,
-payer_code TEXT,
-medical_specialty TEXT,
+
+-- Insurance & Medical Department
+payer_code VARCHAR(20),
+medical_specialty VARCHAR(100),
+
+-- Hospital Activity Metrics
 num_lab_procedures INT,
 num_procedures INT,
 num_medications INT,
 number_outpatient INT,
 number_emergency INT,
 number_inpatient INT,
-diag_1 TEXT,
-diag_2 TEXT,
-diag_3 TEXT,
+
+-- Diagnosis Codes
+diag_1 VARCHAR(20),
+diag_2 VARCHAR(20),
+diag_3 VARCHAR(20),
 number_diagnoses INT,
-max_glu_serum TEXT,
-A1Cresult TEXT,
-metformin TEXT,
-repaglinide TEXT,
-nateglinide TEXT,
-chlorpropamide TEXT,
-glimepiride TEXT,
-acetohexamide TEXT,
-glipizide TEXT,
-glyburide TEXT,
-tolbutamide TEXT,
-pioglitazone TEXT,
-rosiglitazone TEXT,
-acarbose TEXT,
-miglitol TEXT,
-troglitazone TEXT,
-tolazamide TEXT,
-examide TEXT,
-citoglipton TEXT,
-insulin TEXT,
-glyburide_metformin TEXT,
-glipizide_metformin TEXT,
-glimepiride_pioglitazone TEXT,
-metformin_rosiglitazone TEXT,
-metformin_pioglitazone TEXT,
-change TEXT,
-diabetesMed TEXT,
-readmitted TEXT
+
+-- Lab Results
+max_glu_serum VARCHAR(20),
+A1Cresult VARCHAR(20),
+
+-- Diabetes Medications
+metformin VARCHAR(20),
+repaglinide VARCHAR(20),
+nateglinide VARCHAR(20),
+chlorpropamide VARCHAR(20),
+glimepiride VARCHAR(20),
+acetohexamide VARCHAR(20),
+glipizide VARCHAR(20),
+glyburide VARCHAR(20),
+tolbutamide VARCHAR(20),
+pioglitazone VARCHAR(20),
+rosiglitazone VARCHAR(20),
+acarbose VARCHAR(20),
+miglitol VARCHAR(20),
+troglitazone VARCHAR(20),
+tolazamide VARCHAR(20),
+examide VARCHAR(20),
+citoglipton VARCHAR(20),
+insulin VARCHAR(20),
+
+-- Combination Medications
+glyburide_metformin VARCHAR(20),
+glipizide_metformin VARCHAR(20),
+glimepiride_pioglitazone VARCHAR(20),
+metformin_rosiglitazone VARCHAR(20),
+metformin_pioglitazone VARCHAR(20),
+
+-- Treatment Changes
+change VARCHAR(10),
+diabetesMed VARCHAR(10),
+
+-- Target Variable
+readmitted VARCHAR(20)
+
 );
