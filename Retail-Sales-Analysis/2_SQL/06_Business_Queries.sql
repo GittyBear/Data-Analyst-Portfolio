@@ -1,7 +1,13 @@
-/* ============================================================
-   06_BUSINESS_QUERIES.SQL
-   Purpose: Core business insights
-   ============================================================ */
+/*
+Step 6: Business Intelligence Queries
+
+This file contains SQL queries used to generate
+business insights such as:
+
+- Top-selling products
+- Revenue by region
+- Customer purchase trends
+*/
 
 /* Total Revenue */
 SELECT SUM(revenue) AS total_revenue
