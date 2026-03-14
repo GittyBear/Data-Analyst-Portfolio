@@ -1,8 +1,14 @@
-/* ============================================================
-   04_RFM_ANALYSIS.SQL
-   Purpose: Customer segmentation using RFM
-   ============================================================ */
+/*
+Step 4: RFM Analysis
 
+RFM Metrics:
+Recency
+Frequency
+Monetary
+
+Goal:
+Segment customers based on purchasing behaviour.
+*/
 /* RFM Base */
 DROP TABLE IF EXISTS rfm_base CASCADE;
 
