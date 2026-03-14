@@ -42,3 +42,16 @@ FROM fact_sales f
 JOIN dim_customer c ON f.customer_id = c.customer_id
 GROUP BY c.country
 ORDER BY country_revenue DESC;
+
+/* 
+Window Function Example
+Purpose: Rank customers based on their total spending.
+This demonstrates the use of SQL window functions.
+*/
+
+SELECT
+customer_id,
+SUM(total_price) AS total_spent,
+RANK() OVER (ORDER BY SUM(total_price) DESC) AS customer_rank
+FROM sales
+GROUP BY customer_id;
