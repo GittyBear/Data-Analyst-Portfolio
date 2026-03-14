@@ -1,7 +1,12 @@
-/* ============================================================
-   05_COHORT_ANALYSIS.SQL
-   Purpose: Customer retention analysis
-   ============================================================ */
+/*
+Step 5: Cohort Analysis
+
+Goal:
+Track customer retention based on
+First purchase month.
+
+Used to analyze customer lifecycle behaviour.
+*/
 
 /* Identify first purchase month */
 DROP TABLE IF EXISTS customer_cohort CASCADE;
