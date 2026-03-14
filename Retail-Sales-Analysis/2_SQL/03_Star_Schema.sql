@@ -1,7 +1,17 @@
-/* ============================================================
-   03_STAR_SCHEMA.SQL
-   Purpose: Create dimensions and fact table
-   ============================================================ */
+/*
+Step 3: Star Schema Creation
+
+Fact Table:
+Fact_Sales
+
+Dimension Tables:
+Dim_Customers
+Dim_Products
+Dim_Date
+
+Purpose:
+Improve query performance for analytical queries.
+*/
 
 /* ================== DIMENSIONS ================== */
 
